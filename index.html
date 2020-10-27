@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html>
+    <header>
+        <meta charset="UTF-8">
+        <title>Contact US</title>
+        <meta type="description" content="Contact US">
+    </header>
+    <link rel="stylesheet" href="intl-tel-input-master/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="Pikaday-master/css/pikaday.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <body>
+        <div class="contact-form">
+            <div class="form-body">
+                <form id="main-form" method="post">
+                    <div class="input-container">
+                        <input name="fullname" autocomplete="off" id="fullname" type="text" placeholder="David Kamran">
+                        <input name="email-address" autocomplete="off" id="email-address" type="email" placeholder="david.kamran@example.com">
+                        <input name="phone-number" autocomplete="off" id="phone-number" type="tel">
+                        <input name="date-of-birth" autocomplete="off" id="date-of-birth" type="datetime" placeholder="Thu Oct 15 1975">
+                        <input name="date-of-birth-hidden" autocomplete="off" id="date-of-birth-hidden" type="hidden">
+                        <select autocomplete="off" name="address-country" id="address-country"></select>
+                        <textarea autocomplete="off" placeholder="How can we help you today?" name="customer-message" id="customer-message"></textarea>
+                    </div>
+                    <div class="submit-button">
+                        <button>Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="intl-tel-input-master/build/js/intlTelInput.js"></script>
+    <script src="Pikaday-master/pikaday.js"></script>
+    <script src="validate.js-master/validate.js"></script>
+    <script src="libphonenumber-master/lib/input-format.min.js"></script>
+    <script src="libphonenumber-master/libphonenumber-max.js"></script>
+    <script src="src/js/main.js"></script>
+
+  </html>

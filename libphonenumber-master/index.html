@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>libphonenumber-js</title>
+
+		<!-- React 16 -->
+
+		<!-- PropTypes -->
+
+
+		<script>
+			window.InputFormatReactInput = window.InputFormat
+		</script>
+
+		<script src="./lib/input-format.min.js"></script>
+		<script src="./libphonenumber-max.js"></script>
+
+		<meta charset="utf-8"/>
+	</head>
+
+	<body>
+
+		<script>
+
+			function PhoneNumber(number) {
+				const keyValues = {
+					'Number': number.number,
+					'Country': number.country || '—',
+					'National': number.formatNational(),
+					'International': number.formatInternational(),
+					'URI': number.getURI(),
+					'Type': number.getType() || '—',
+					'Possible': number.isPossible() ? 'true' : 'false',
+					'Valid': number.isValid() ? 'true' : 'false'
+				}
+				return keyValues;
+			}
+
+
+			function status(number, country) {
+				let parsedNumber
+				let parseCountry = country;
+				let parseValue = number;
+				parsedNumber = libphonenumber.parsePhoneNumberFromString(parseValue, parseCountry)
+				return PhoneNumber(parsedNumber);
+			}
+
+			// https://stackoverflow.com/questions/22677931/react-js-onchange-event-for-contenteditable/27255103#27255103
+			
+			console.log(status("213-373-4253", "US"));
+		</script>
+	</body>
+</html>
